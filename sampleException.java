@@ -16,7 +16,7 @@ class SampleException{
             System.out.println("String cant be assigned to int");
         }
         catch(Exception e){
-            System.out.println("check exceptin caught");
+            System.out.println("check exception caught");
         }
     }
 }
