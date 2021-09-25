@@ -1,11 +1,45 @@
 import java.util.Scanner;
-class abc{
-	static void printName(){
-		System.out.println("hello, Rahul");
-	}
+class TestException extends Exception{
+	TestException(){super();}
+	TestException(String s){super(s);}
 }
 class Test{
-	public static void printName(){
+	public static void main(String[] args){
+		for(String arg:args){
+			try{
+				thrower(arg);
+				System.out.println("Test \""+arg+
+							"\" didin't thow an excepiton");
+			}catch (Exception e){
+				System.out.println("Test \""+arg+"\" threw a " + e.getClass()+
+								"\n with message: " +
+						e.getMessage());
+			}
+		}
+	}
+	static int thrower(String s)throws TestException{
+		try{
+			if(s.equals("divide")){
+				int i=0;
+				return i/i;
+			}
+			if(s.equals("null")){
+				s=null;
+				return s.length();
+			}
+			if(s.equals("test")){
+				throw new TestException("Test Message");
+			}
+			return 0;
+		}
+		finally{
+			System.out.println("[thrower(\"" + s + "\") done]");
+		}
+	}
+}
+/*
+class Test{
+	/*public static void printName(){
 		System.out.println("Rakesh");
 	}
 	public static void main(String[] args){
@@ -39,5 +73,5 @@ class Test{
 		t1.y = 999;
 		Test t2 = new Test();
 		System.out.println(t2.x + "   ..... "+ t2.y);
-*/	}
-}
+	}
+}*/
