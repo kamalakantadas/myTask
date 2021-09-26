@@ -4,7 +4,7 @@ class MyRunnableThread implements Runnable{
     }
     
     public static void main(String[] args){
-        MyRunnableThread mt = new MyRunnableThread();
-        mt.run();
+        Thread mt = new Thread(new MyRunnableThread());
+        mt.start();
     }
 }

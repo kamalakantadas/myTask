@@ -5,6 +5,6 @@ Class MyThread implements Runnable{
     
     public static void main(String[] args){
         MyThread mt = new MyThread();
-        my.start();
+        mt.start();
     }
 }
