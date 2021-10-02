@@ -6,6 +6,7 @@ class PrimeThread extends Thread {
 
           public void run() {
 			  System.out.println("Running Number "+minPrime);
+
               // compute primes larger than minPrime
               //&nbsp;&nbsp;&nbsp;
           }
