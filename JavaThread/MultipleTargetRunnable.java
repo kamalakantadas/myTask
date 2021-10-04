@@ -7,7 +7,16 @@ class MultipleTargetRunnable extends Thread{
 			Thread f = new Thread(new MultipleTargetRunnable());
 			Thread p = new Thread(new MultipleTargetRunnable());
 			t.start();
+			try{
+				t.join();
+			}catch(InterruptedException e){}
 			f.start();
+			try{
+				t.join();
+			}catch(InterruptedException e){}
 			p.start();
+			try{
+				t.join();
+			}catch(InterruptedException e){}
 		}
 }
