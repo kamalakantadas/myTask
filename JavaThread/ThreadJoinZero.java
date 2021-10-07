@@ -1,3 +1,4 @@
+//Thread JoinZero
 class ThreadJoinZero{
 
 	static Runnable r = ()->{
