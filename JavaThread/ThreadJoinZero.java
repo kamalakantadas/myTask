@@ -10,20 +10,21 @@ class ThreadJoinZero{
 			Thread t2 = new Thread(r);
 
 			t1.setName("Rahul Thread");
-			t1.start();
-			try{
+
+			/*try{
 				t1.join();//so what will happen here is "Rahul" is complete before "kamalakanta". so lets see
 			}
 			catch (InterruptedException e){
 				System.out.println(e);
-			}
+			}*/
 			t2.setName("kamalakanta Thread");
 			t2.start();
-			/*try{
+			t1.start();
+			try{
 				t2.join();//kamalakanta Thread will complete before Rahul Thread
 			}catch (InterruptedException e){
 				System.out.println(e);
-			}*/
+			}
 
 			}
 }
